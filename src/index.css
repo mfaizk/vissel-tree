@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+
+/* react-d3-tree connection styles */
+.tree-connection-path {
+  stroke: #9E9E9E;
+  stroke-width: 1.5;
+  fill: none;
+}
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 99%;
+    --foreground: 220 20% 20%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 20% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 20%;
+
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 220 20% 20%;
+
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 10% 50%;
+
+    --accent: 217 91% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 217 91% 60%;
+
+    --radius: 0.5rem;
+
+    /* Sidebar */
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 220 10% 40%;
+    --sidebar-primary: 217 91% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 217 91% 97%;
+    --sidebar-accent-foreground: 217 91% 50%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217 91% 60%;
+
+    /* Tree Node Colors */
+    --node-equipment-type: 4 78% 63%;
+    --node-equipment-type-foreground: 0 0% 100%;
+    
+    --node-equipment: 217 91% 60%;
+    --node-equipment-foreground: 0 0% 100%;
+    
+    --node-equipment-draft: 217 40% 75%;
+    --node-equipment-draft-foreground: 0 0% 100%;
+    
+    --node-assembly: 220 10% 50%;
+    --node-assembly-foreground: 0 0% 100%;
+    
+    --node-assembly-draft: 220 10% 70%;
+    --node-assembly-draft-foreground: 0 0% 100%;
+    
+    --node-component: 145 63% 42%;
+    --node-component-foreground: 0 0% 100%;
+    
+    --node-component-draft: 145 40% 70%;
+    --node-component-draft-foreground: 0 0% 100%;
+
+    /* Tree canvas */
+    --tree-background: 220 14% 98%;
+    --tree-grid: 220 13% 93%;
+    --tree-line: 220 13% 85%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+}
+
+@layer utilities {
+  .tree-grid-bg {
+    background-image: 
+      radial-gradient(circle, hsl(var(--tree-grid)) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+  
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--border)) transparent;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: hsl(var(--border));
+    border-radius: 3px;
+  }
+}
